@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CANINOS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+    <h2 class="logo">CANINOS</h2>
+
+    <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <div class="icono-carrito" onclick="abrirCarrito()">
+             <i class="fa-solid fa-cart-shopping"></i>
+             <span id="contador-nav">0</span>
+        </div>
+
+    </div>
+</nav>
+
+    <section class="hero" id="inicio">
+        <h1>Descubre lo mejor para tu paladar</h1>
+        <p>Calidad premium al mejor precio</p>
+    </section>
+
+    <section class="contenedor-productos" id="productos">
+
+        <div class="producto">
+            <img src="imagenes/salchipapa.jpg">
+            <h3>Salchipapa Sencilla</h3>
+            <p class="precio">$15.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Salchipapa Sencilla', 15000)">
+                  Agregar al carrito
+            </button>
+
+            <a href="salchipapa.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/hamburguesa.jpg">
+            <h3>Hamburguesa</h3>
+            <p class="precio">$15.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Hamburguesa', 15000)">
+                  Agregar al carrito
+            </button>
+            <a href="hamburguesa.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/perro.jpg">
+            <h3>Perro Sencillo</h3>
+            <p class="precio">$15.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Perro Sencillo', 15000)">
+                  Agregar al carrito
+            </button>
+            <a href="perro.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/combo 45.jpg">
+            <h3>3 Hamburguesas + Gase</h3>
+            <p class="precio">$45.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, '3 Hamburguesa + Gaseosa', 45000)">
+                  Agregar al carrito
+            </button>
+            <a href="combo45.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/combo 38.jpg">
+            <h3>3 Perros Rancheros + Gase</h3>
+            <p class="precio">$38.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, '3 Perros Rancheros + Gaseosa', 38000)">
+                  Agregar al carrito
+            </button>
+            <a href="combo38.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/prueba.jpg">
+            <h3>prueba</h3>
+            <p class="precio">$1.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'prueba', 1000)">
+                  Agregar al carrito
+            </button>
+            <a href="prueba.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+</section>
+
+     <section class="carrito">
+        <h2>🛒 Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+
+         <div class="datos-cliente">
+             <input type="text" id="nombreCliente" placeholder="Tu nombre">
+
+             <select id="metodoPago">
+                  <option value="">Selecciona método de pago</option>
+                  <option value="Nequi">Nequi</option>
+                  <option value="Bancolombia">Bancolombia</option>
+                  <option value="Daviplata">Daviplata</option>
+             </select>
+        </div>
+
+        <div class="acciones-carrito">
+             <button type="button" class="btn-vaciar" onclick="vaciarCarrito()">
+                 Vaciar carrito
+             </button>
+
+             <button type="button" class="btn-pago" onclick="enviarPedidoWhatsApp()">
+                 Finalizar pedido
+             </button>
+         </div>
+
+</section>
+
+    <section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: caninos.girardot@gmail.com</p>
+    <p>Teléfono: +57 304 602 5749
+    <p>Direccion: Cra 5 Alto de la Cruz</p>
+    </p>
+</section>
+
+<a href="https://wa.me/573023596381?text=Hola%20quiero%20más%20información%20sobre%20sus%20productos" 
+   class="whatsapp-container" 
+   target="_blank">
+
+    <span class="whatsapp-text">¿Necesitas ayuda?</span>
+
+    <div class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </div>
+
+</a>
+
+<div id="carrito-lateral" class="carrito-lateral">
+    <div class="carrito-header">
+        <h3>Tu carrito</h3>
+        <button onclick="cerrarCarrito()">X</button>
+    </div>
+
+    <ul id="lista-carrito"></ul>
+
+    <p>Total: $<span id="total">0</span></p>
+
+    <button class="btn-pago" onclick="enviarPedidoWhatsApp()">
+        Finalizar pedido
+    </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
