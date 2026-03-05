@@ -10,18 +10,23 @@
 <body>
 
     <nav class="navbar">
-    <h2 class="logo">CANINOS</h2>
+    <div class="logo">
+         <img src="imagenes/logo.png" alt="Logo">
+         <h1>CANINOS</h1>
+    </div>
 
-    <div class="nav-links">
+    <div class="nav-links">   
         <a href="#inicio">Inicio</a>
         <a href="#productos">Productos</a>
         <a href="#contacto">Contacto</a>
-        <div class="icono-carrito" onclick="abrirCarrito()">
-             <i class="fa-solid fa-cart-shopping"></i>
-             <span id="contador-nav">0</span>
-        </div>
 
     </div>
+
+    <div class="icono-carrito" onclick="abrirCarrito()">
+         <i class="fa-solid fa-cart-shopping"></i>
+         <span id="contador-nav">0</span>
+    </div>
+
 </nav>
 
     <section class="hero" id="inicio">
@@ -32,7 +37,7 @@
     <section class="contenedor-productos" id="productos">
 
         <div class="producto">
-            <img src="salchipapa.jpg">
+            <img src="imagenes/salchipapa.jpg">
             <h3>Salchipapa Sencilla</h3>
             <p class="precio">$15.000</p>
             <div class="control-cantidad">
@@ -51,7 +56,7 @@
         </div>
 
         <div class="producto">
-            <img src="hamburguesa.jpg">
+            <img src="imagenes/hamburguesa.jpg">
             <h3>Hamburguesa</h3>
             <p class="precio">$15.000</p>
             <div class="control-cantidad">
@@ -69,7 +74,7 @@
         </div>
 
         <div class="producto">
-            <img src="perro.jpg">
+            <img src="imagenes/perro.jpg">
             <h3>Perro Sencillo</h3>
             <p class="precio">$15.000</p>
             <div class="control-cantidad">
@@ -87,7 +92,7 @@
         </div>
 
         <div class="producto">
-            <img src="combo 45.jpg">
+            <img src="imagenes/combo 45.jpg">
             <h3>3 Hamburguesas + Gase</h3>
             <p class="precio">$45.000</p>
             <div class="control-cantidad">
@@ -105,7 +110,7 @@
         </div>
 
         <div class="producto">
-            <img src="combo 38.jpg">
+            <img src="imagenes/combo 38.jpg">
             <h3>3 Perros Rancheros + Gase</h3>
             <p class="precio">$38.000</p>
             <div class="control-cantidad">
@@ -123,7 +128,7 @@
         </div>
 
         <div class="producto">
-            <img src="prueba.jpg">
+            <img src="imagenes/prueba.jpg">
             <h3>prueba</h3>
             <p class="precio">$1.000</p>
             <div class="control-cantidad">
@@ -171,22 +176,38 @@
 </section>
 
     <section class="contacto" id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: caninos.girardot@gmail.com</p>
-    <p>Teléfono: +57 304 602 5749
-    <p>Direccion: Cra 5 Alto de la Cruz</p>
-    </p>
+         <h2>Contacto</h2>
+    <div class="contacto-contenedor">
+        
+        <div class="info-contacto">
+             <p>Email: caninos.girardot@gmail.com</p>
+             <p>Teléfono: +57 304 602 5749
+            <p>Direccion: Cra 5 Alto de la Cruz</p>
+     </div>
+
+    <div class="mapa">
+         <iframe    
+             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d994.6597351121035!2d-74.80414181401024!3d4.290139226789632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1772732517545!5m2!1ses!2sco"
+             width="100%"
+             height="300" 
+             style="border:0;" 
+             allowfullscreen="" 
+             loading="lazy">
+        </iframe>
+    </div>
+    
+</div>    
 </section>
 
 <a href="https://wa.me/573023596381?text=Hola%20quiero%20más%20información%20sobre%20sus%20productos" 
    class="whatsapp-container" 
    target="_blank">
 
-    <span class="whatsapp-text">¿Necesitas ayuda?</span>
+     <span class="whatsapp-text">¿Necesitas ayuda?</span>
 
-    <div class="whatsapp-btn">
+     <div class="whatsapp-btn">
         <i class="fa-brands fa-whatsapp"></i>
-    </div>
+     </div>
 
 </a>
 
@@ -194,20 +215,22 @@
     <div class="carrito-header">
         <h3>Tu carrito</h3>
         <button onclick="cerrarCarrito()">X</button>
-    </div>
+    
+</div>
 
-    <ul id="lista-carrito"></ul>
+        <ul id="lista-carrito"></ul>
 
-    <p>Total: $<span id="total">0</span></p>
+        <p>Total: $<span id="total">0</span></p>
 
-    <button class="btn-pago" onclick="enviarPedidoWhatsApp()">
-        Finalizar pedido
-    </button>
+        <button class="btn-pago" onclick="enviarPedidoWhatsApp()">
+             Finalizar pedido
+        </button>
+
 </div>
 
 <script src="script.js"></script>
 </body>
-
 </html>
+
 
 
