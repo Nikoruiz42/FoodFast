@@ -30,7 +30,7 @@ body {
     margin-left: 20px;
     text-decoration: none;
     color: #111;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* HERO */
@@ -38,7 +38,7 @@ body {
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(to right, #111, #333);
+    background: linear-gradient(to right, #da1717, #333);
     color: white;
 }
 
@@ -168,7 +168,7 @@ button {
 }
 
 .carrito li button:hover {
-    background: rgba(230, 57, 71, 0.882);
+    background: rgba(230, 57, 70, 0.1);
     transform: scale(1.2);
 }
 html {
@@ -214,7 +214,7 @@ html {
     padding: 8px 14px;
     border-radius: 20px;
     font-size: 14px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.15);
     opacity: 0;
     transform: translateX(10px);
     transition: all 0.3s ease;
@@ -393,7 +393,7 @@ html {
 }
 .control-cantidad {
     display: flex;
-    align-items: center;
+    align-items:center;
     gap: 5px;
     margin: 10px 0;
 }
@@ -446,4 +446,45 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 80px;       /* tamaño del logo */
+    height: 80px;
+    border-radius: 80%; /* lo hace circular */
+    object-fit: cover;  /* evita que se deforme */
+}
+.mapa {
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.contacto-contenedor {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    gap: 110px; /* espacio entre texto y mapa */
+    margin-top: 30px;
+    flex-wrap: wrap; /* para que en celular se acomode */
+}
+
+.info-contacto {
+    max-width: 300px;
+}
+
+.mapa {
+    width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
 }
