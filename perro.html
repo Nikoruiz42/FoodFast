@@ -24,8 +24,7 @@
             <p class="precio">$15.000</p>
 
             <p class="descripcion">
-                Este es un producto de alta calidad, fabricado con los mejores materiales.
-                Ideal para quienes buscan estilo y durabilidad.
+                Un clásico que nunca falla. Nuestro perro caliente sencillo está preparado con pan suave, salchicha caliente y los acompañamientos tradicionales: salsa de tomate, mostaza y cebolla picada. Una opción práctica y deliciosa, perfecta para disfrutar en cualquier momento del día. 😋
             </p>
 
             <div class="valoraciones">
@@ -42,7 +41,32 @@
 
     </section>
 
+    <section class="carrito">
+        <h2>🛒 Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+
+         <div class="datos-cliente">
+             <input type="text" id="nombreCliente" placeholder="Tu nombre">
+
+             <select id="metodoPago">
+                  <option value="">Selecciona método de pago</option>
+                  <option value="Nequi">Nequi</option>
+                  <option value="Bancolombia">Bancolombia</option>
+                  <option value="Daviplata">Daviplata</option>
+             </select>
+        </div>
+
+        <div class="acciones-carrito">
+             <button type="button" class="btn-vaciar" onclick="vaciarCarrito()">
+                 Vaciar carrito
+             </button>
+
+             <button type="button" class="btn-pago" onclick="enviarPedidoWhatsApp()">
+                 Finalizar pedido
+             </button>
+         </div>
+
 <script src="script.js"></script>
 </body>
-
 </html>
