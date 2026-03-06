@@ -10,40 +10,65 @@
     <section class="detalle-producto">
 
         <div class="galeria">
-            <img src="hamburguesa.jpg" class="imagen-principal">
+            <img src="imagenes/hamburguesa.jpg" class="imagen-principal" id="imagenPrincipal">
 
             <div class="miniaturas">
-                <img src="hamburguesa.jpg">
-                <img src="hamburguesa.jpg">
-                <img src="hamburguesa.jpg">
+                <img src="imagenes/hamburguesa.jpg">
+                <img src="imagenes/hamburguesa.jpg">
+                <img src="imagenes/hamburguesa.jpg">
             </div>
         </div>
 
-        <div class="info-producto">
+        <div class="info-producto producto">
             <h1>Hamburguesa</h1>
             <p class="precio">$15.000</p>
 
             <p class="descripcion">
-                Este es un producto de alta calidad, fabricado con los mejores materiales.
-                Ideal para quienes buscan estilo y durabilidad.
-            </p>
-
+                xxxxxx
+        <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
             <div class="valoraciones">
-                ⭐⭐⭐⭐⭐ (4.6/5)
+                ⭐⭐⭐⭐⭐ (4.9/5)
             </div>
 
-            <button onclick="agregarAlCarrito('Hamburguesa', 15000)">
-                Agregar al carrito
+            <button onclick="agregarAlCarritoConCantidad(this,'Hamburguesa',15000)">
+             Agregar al carrito
             </button>
 
             <a href="index.html">Volver a la tienda</a>
 
+    
+    <section class="carrito">
+        <h2>🛒 Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+
+         <div class="datos-cliente">
+             <input type="text" id="nombreCliente" placeholder="Tu nombre">
+
+             <select id="metodoPago">
+                  <option value="">Selecciona método de pago</option>
+                  <option value="Nequi">Nequi</option>
+                  <option value="Bancolombia">Bancolombia</option>
+                  <option value="Daviplata">Daviplata</option>
+             </select>
         </div>
 
-    </section>
+        <div class="acciones-carrito">
+             <button type="button" class="btn-vaciar" onclick="vaciarCarrito()">
+                 Vaciar carrito
+             </button>
 
+             <button type="button" class="btn-pago" onclick="enviarPedidoWhatsApp()">
+                 Finalizar pedido
+             </button>
+         </div>
+
+<section>
+    
 <script src="script.js"></script>
 </body>
-
 </html>
-

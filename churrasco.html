@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Perro Sencillo</title>
+    <title>Churrasco</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,33 +10,18 @@
     <section class="detalle-producto">
 
         <div class="galeria">
-            <img src="imagenes/perro.jpg" class="imagen-principal" id="imagenPrincipal">
+            <img src="imagenes/churrasco.jpg" class="imagen-principal"id="imagenPrincipal">
 
             <div class="miniaturas">
-                <img src="imagenes/perro.jpg">
-                <img src="imagenes/perro2.jpg">
-                <img src="imagenes/perro3.png">
+                <img src="imagenes/churrasco.jpg">
+                <img src="imagenes/churrasco2.jpg">
+                <img src="imagenes/churrasco3.jpg">
             </div>
-
- <section class="comentarios">
-        <h3>Comentarios de clientes</h3>
-         <div class="agregar-comentario">
-            <input type="text" id="nombreComentario" placeholder="Tu nombre">
-            <textarea id="textoComentario" placeholder="Escribe tu comentario"></textarea>
-            <button onclick="agregarComentario()">Publicar comentario</button>
-
         </div>
-
-         <ul id="lista-comentarios"></ul>
-
-        </section>
-
-        </div>
-
 
         <div class="info-producto producto">
-            <h1>Perro Sencillo</h1>
-            <p class="precio">$15.000</p>
+            <h1>Churrasco</h1>
+            <p class="precio">$60.000</p>
 
             <p class="descripcion">
                 Un clásico que nunca falla. Nuestro perro caliente sencillo está preparado con pan suave, salchicha caliente y los acompañamientos tradicionales: salsa de tomate, mostaza y cebolla picada. Una opción práctica y deliciosa, perfecta para disfrutar en cualquier momento del día. 😋
@@ -46,27 +31,11 @@
                  <input type="number" value="1" min="1">
                  <button onclick="cambiarCantidad(this, 1)">+</button>
              </div>
-
-        <div class="valoraciones">
-            <h3>Valoración del producto</h3>
-            <div class="estrellas-container">
-            <div class="estrellas" id="estrellas">
-             ★★★★★
+            <div class="valoraciones">
+                ⭐⭐⭐⭐⭐ (4.9/5)
             </div>
 
-            <button onclick="borrarCalificacion()" class="borrar-voto">
-             Borrar mi calificación
-             </button>
-
-            <span id="tooltip-valor"></span>
-
-            </div>
-
-            <p>Puntuación promedio: <span id="promedio">0</span> ⭐</p>
-
-            </div>
-
-            <button onclick="agregarAlCarritoConCantidad(this,'Perro Sencillo',15000)">
+            <button onclick="agregarAlCarritoConCantidad(this,'Churrasco',60000)">
              Agregar al carrito
             </button>
 
@@ -99,8 +68,7 @@
              </button>
          </div>
 
-        </section>
-
+<section>
     
 <script src="script.js"></script>
 </body>

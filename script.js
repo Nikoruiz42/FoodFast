@@ -337,4 +337,3 @@ alert("Tu calificación fue eliminada. Ahora puedes votar nuevamente ⭐");
 location.reload();
 
 }
-
