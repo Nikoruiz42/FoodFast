@@ -337,8 +337,4 @@ alert("Tu calificación fue eliminada. Ahora puedes votar nuevamente ⭐");
 location.reload();
 
 }
-    actualizarCarrito();
 
-    cantidadInput.value = 1;
-
-}
