@@ -128,19 +128,19 @@
         </div>
 
         <div class="producto">
-            <img src="prueba.jpg">
-            <h3>prueba</h3>
-            <p class="precio">$1.000</p>
+            <img src="churrasco.jpg">
+            <h3>Churrasco</h3>
+            <p class="precio">$60.000</p>
             <div class="control-cantidad">
                  <button onclick="cambiarCantidad(this, -1)">-</button>
                  <input type="number" value="1" min="1">
                  <button onclick="cambiarCantidad(this, 1)">+</button>
              </div>
 
-            <button onclick="agregarAlCarritoConCantidad(this, 'prueba', 1000)">
+            <button onclick="agregarAlCarritoConCantidad(this, 'Churrasco', 60000)">
                   Agregar al carrito
             </button>
-            <a href="prueba.html" class="btn-ver">
+            <a href="churrasco.html" class="btn-ver">
                  Ver más
             </a>
         </div>
@@ -218,9 +218,9 @@
     
 </div>
 
-        <ul id="lista-carrito"></ul>
+        <ul id="lista-carrito-lateral"></ul>
 
-        <p>Total: $<span id="total">0</span></p>
+        <p>Total: $<span id="total-lateral">0</span></p>
 
         <button class="btn-pago" onclick="enviarPedidoWhatsApp()">
              Finalizar pedido
@@ -231,7 +231,6 @@
 <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
