@@ -10,37 +10,69 @@
     <section class="detalle-producto">
 
         <div class="galeria">
-            <img src="perro.jpg" class="imagen-principal">
+            <img src="imagenes/perro.jpg" class="imagen-principal" id="imagenPrincipal">
 
             <div class="miniaturas">
-                <img src="perro.jpg">
-                <img src="perro.jpg">
-                <img src="perro.jpg">
+                <img src="imagenes/perro.jpg">
+                <img src="imagenes/perro2.jpg">
+                <img src="imagenes/perro3.png">
             </div>
+
+ <section class="comentarios">
+        <h3>Comentarios de clientes</h3>
+         <div class="agregar-comentario">
+            <input type="text" id="nombreComentario" placeholder="Tu nombre">
+            <textarea id="textoComentario" placeholder="Escribe tu comentario"></textarea>
+            <button onclick="agregarComentario()">Publicar comentario</button>
+
         </div>
 
-        <div class="info-producto">
+         <ul id="lista-comentarios"></ul>
+
+        </section>
+
+        </div>
+
+
+        <div class="info-producto producto">
             <h1>Perro Sencillo</h1>
             <p class="precio">$15.000</p>
 
             <p class="descripcion">
                 Un clásico que nunca falla. Nuestro perro caliente sencillo está preparado con pan suave, salchicha caliente y los acompañamientos tradicionales: salsa de tomate, mostaza y cebolla picada. Una opción práctica y deliciosa, perfecta para disfrutar en cualquier momento del día. 😋
             </p>
+        <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
 
-            <div class="valoraciones">
-                ⭐⭐⭐⭐⭐ (4.9/5)
+        <div class="valoraciones">
+            <h3>Valoración del producto</h3>
+            <div class="estrellas-container">
+            <div class="estrellas" id="estrellas">
+             ★★★★★
             </div>
 
-            <button onclick="agregarAlCarrito('Perro Sencillo', 15000)">
-                Agregar al carrito
+            <button onclick="borrarCalificacion()" class="borrar-voto">
+             Borrar mi calificación
+             </button>
+
+            <span id="tooltip-valor"></span>
+
+            </div>
+
+            <p>Puntuación promedio: <span id="promedio">0</span> ⭐</p>
+
+            </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this,'Perro Sencillo',15000)">
+             Agregar al carrito
             </button>
 
             <a href="index.html">Volver a la tienda</a>
 
-        </div>
-
-    </section>
-
+    
     <section class="carrito">
         <h2>🛒 Carrito</h2>
         <ul id="lista-carrito"></ul>
@@ -67,6 +99,9 @@
              </button>
          </div>
 
+        </section>
+
+    
 <script src="script.js"></script>
 </body>
 </html>
