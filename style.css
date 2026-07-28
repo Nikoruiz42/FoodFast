@@ -834,3 +834,69 @@ button:hover {
     text-decoration: underline;
     color: #a30f0f;
 }
+@media (max-width: 768px) {
+
+    .detalle-producto {
+        flex-direction: column;
+        padding: 25px 20px;
+        gap: 25px;
+    }
+
+    .galeria {
+        width: 100%;
+    }
+
+    .imagen-principal {
+        max-height: 280px;
+    }
+
+    .miniaturas {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .info-producto {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .info-producto h1 {
+        font-size: 26px;
+    }
+
+    .badges-confianza {
+        justify-content: center;
+    }
+
+    .control-cantidad {
+        justify-content: center;
+    }
+
+    .info-producto button {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .info-producto a {
+        display: block;
+        text-align: center;
+    }
+
+    .carrito {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    .datos-cliente {
+        flex-direction: column;
+    }
+
+    .acciones-carrito {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .acciones-carrito button {
+        width: 100%;
+    }
+}
