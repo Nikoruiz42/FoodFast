@@ -272,12 +272,19 @@
                  <button onclick="cambiarCantidad(this, 1)">+</button>
              </div>
 
-            <button onclick="agregarAlCarritoConCantidad(this, 'Rellena con papa', 3000)">
+        <div class="producto">
+            <img src="PORCION RELLENA.jpeg">
+            <h3>Coca cola</h3>
+            <p class="precio">$5.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Coca cola', 5000)">
                   Agregar al carrito
             </button>
-            <a href="rellena con papa.html" class="btn-ver">
-                 Ver más
-            </a>
         </div>
 
 </section>
