@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Piqueteadero Carola - Comida típica colombiana: migas, picadas y más. Pide a domicilio por WhatsApp.">
+    <title>PIQUETEADERO CAROLA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="logo">
+         <img src="imagenes/LOGO4.jpeg" alt="Logo">
+         <span class="logo-texto">PIQUETEADERO CAROLA</span>
+    </div>
+
+    <div class="nav-links">   
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+
+    </div>
+
+    <div class="icono-carrito" onclick="abrirCarrito()">
+         <i class="fa-solid fa-cart-shopping"></i>
+         <span id="contador-nav">0</span>
+    </div>
+
+</nav>
+
+    <section class="hero" id="inicio">
+        <h1>Descubre lo mejor para tu paladar</h1>
+        <p>Calidad premium al mejor precio</p>
+        <a href="#productos" class="btn-hero">Ver menú 🍽️</a>
+    </section>
+
+    <h2 class="titulo-seccion">Nuestro menú</h2>
+
+    <section class="contenedor-productos" id="productos">
+
+        <div class="producto">
+            <img src="imagenes/BOLA DE MIGAS.jpeg" alt="Bola de migas">
+            <h3>Bola de migas</h3>
+            <p class="precio">$4.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Bola de migas', 4000)">
+                  Agregar al carrito
+            </button>
+
+            <a href="bola de migas.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/MIGAS SENCILLAS.jpeg">
+            <h3>Migas Sencillas</h3>
+            <p class="precio">$6.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Migas Sencillas', 6000)">
+                  Agregar al carrito
+            </button>
+
+            <a href="migas sencillas.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+
+        <div class="producto">
+            <img src="imagenes/MIGAS CON CHORIZO2.jpeg">
+            <h3>Migas con chorizo</h3>
+            <p class="precio">$10.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+            </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Migas con chorizo', 10000)">
+                  Agregar al carrito
+            </button>
+
+            <a href="migas con chorizo.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/MIGAS CON CARNE.jpeg">
+            <h3>Migas con 1 carne</h3>
+            <p class="precio">$13.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Migas con 1 carne', 13000)">
+                  Agregar al carrito
+            </button>
+            <a href="migas con 1 carne.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/MIGAS CON 2 CARNES 2.jpeg">
+            <h3>Migas con 2 carnes</h3>
+            <p class="precio">$18.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Migas con 2 carnes', 18000)">
+                  Agregar al carrito
+            </button>
+            <a href="migas con 2 carnes.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/PICADA 1.jpeg">
+            <h3>Picada personal</h3>
+            <p class="precio">$18.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Picada personal', 18000)">
+                  Agregar al carrito
+            </button>
+            <a href="picada personal.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/PICADA 2.jpeg">
+            <h3>Picada para 2</h3>
+            <p class="precio">$25.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Picada para 2', 25000)">
+                  Agregar al carrito
+            </button>
+            <a href="picada para 2.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/PICADA 3.jpeg">
+            <h3>Picada para 3</h3>
+            <p class="precio">$32.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Picada para 3', 32000)">
+                  Agregar al carrito
+            </button>
+            <a href="picada para 3.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/BANDEJA.jpeg">
+            <h3>Bandeja 2 carnes</h3>
+            <p class="precio">$15.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Bandeja 2 carnes', 15000)">
+                  Agregar al carrito
+            </button>
+            <a href="bandeja 2 carnes.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/PORCION CHUNCHULLA.jpeg">
+            <h3>Porcion chunchulla</h3>
+            <p class="precio">$10.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Porcion chunchulla', 10000)">
+                  Agregar al carrito
+            </button>
+            <a href="porcion chunchulla.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+
+        <div class="producto">
+            <img src="imagenes/PORCION BOFE.jpeg">
+            <h3>Porcion de bofe</h3>
+            <p class="precio">$9.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Porcion de bofe', 9000)">
+                  Agregar al carrito
+            </button>
+            <a href="porcion bofe.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/CHORIZO CON PAPA.jpeg">
+            <h3>Chorizo con papa</h3>
+            <p class="precio">$5.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Chorizo con papa', 5000)">
+                  Agregar al carrito
+            </button>
+            <a href="chorizo con papa.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/PORCION RELLENA.jpeg">
+            <h3>Rellena con papa</h3>
+            <p class="precio">$3.000</p>
+            <div class="control-cantidad">
+                 <button onclick="cambiarCantidad(this, -1)">-</button>
+                 <input type="number" value="1" min="1">
+                 <button onclick="cambiarCantidad(this, 1)">+</button>
+             </div>
+
+            <button onclick="agregarAlCarritoConCantidad(this, 'Rellena con papa', 3000)">
+                  Agregar al carrito
+            </button>
+            <a href="rellena con papa.html" class="btn-ver">
+                 Ver más
+            </a>
+        </div>
+
+</section>
+
+     <section class="carrito">
+        <h2>🛒 Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+
+         <div class="datos-cliente">
+             <input type="text" id="nombreCliente" placeholder="Tu nombre">
+
+             <select id="metodoPago">
+                  <option value="">Selecciona método de pago</option>
+                  <option value="Nequi">Nequi</option>
+                  <option value="Bancolombia">Bancolombia</option>
+                  <option value="Daviplata">Daviplata</option>
+             </select>
+        </div>
+
+        <div class="acciones-carrito">
+             <button type="button" class="btn-vaciar" onclick="vaciarCarrito()">
+                 Vaciar carrito
+             </button>
+
+             <button type="button" class="btn-pago" onclick="enviarPedidoWhatsApp()">
+                 Finalizar pedido
+             </button>
+         </div>
+
+</section>
+
+    <section class="contacto" id="contacto">
+         <h2>Contacto</h2>
+    <div class="contacto-contenedor">
+        
+        <div class="info-contacto">
+             <p>Email: adriana.nemes00@gmail.com</p>
+             <p>Teléfono: +57 302 465 9115</p>
+            <p>Direccion: Cra 5 Alto de la Cruz</p>
+     </div>
+
+    <div class="mapa">
+         <iframe    
+             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d418.20227320570933!2d-74.80257814998681!3d4.291288954790612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sco!4v1785190681958!5m2!1sen!2sco" 
+             width="100%"
+             height="300" 
+             style="border:0;" 
+             allowfullscreen="" 
+             loading="lazy">
+        </iframe>
+    </div>
+    
+</div>    
+</section>
+
+<a href="https://wa.me/573023596381?text=Hola%20quiero%20más%20información%20sobre%20sus%20productos" 
+   class="whatsapp-container" 
+   target="_blank">
+
+     <span class="whatsapp-text">¿Necesitas ayuda?</span>
+
+     <div class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+     </div>
+
+</a>
+
+<div id="carrito-lateral" class="carrito-lateral">
+    <div class="carrito-header">
+        <h3>Tu carrito</h3>
+        <button onclick="cerrarCarrito()">X</button>
+    
+</div>
+
+        <ul id="lista-carrito-lateral"></ul>
+
+        <p>Total: $<span id="total-lateral">0</span></p>
+
+        <button class="btn-pago" onclick="enviarPedidoWhatsApp()">
+             Finalizar pedido
+        </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
