@@ -118,7 +118,7 @@ function enviarPedidoWhatsApp() {
     mensaje += `\nTotal: $${total.toLocaleString()}\n`;
     mensaje += `Método de pago elegido: ${metodo}`;
 
-    let telefono = "573023596381";
+    let telefono = "573024659115";
 
     let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
